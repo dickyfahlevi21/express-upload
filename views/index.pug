@@ -1,5 +1,8 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  .text-center
+    h1.mb-4.mt-5= title
+    p.mb-4 Welcome to #{title}
+    .form-group
+      a.btn.btn-success(href="/users" role="button") Go To Users

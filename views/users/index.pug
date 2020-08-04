@@ -1,12 +1,27 @@
 extends ../layouts
 
 block content
-    form(action=`/users` method="post" enctype="multipart/form-data")
-        .form-group
+    form(action='/users' method="POST" class="mx-auto" enctype="multipart/form-data")
+        .form-group.mb-4
             label(for="exampleInputEmail1") Nama
             input.form-control(type="text"  name="nama")
-        .form-group
+        .form-group.mb-4
             label(for="exampleInputEmail1") Photo
-            input.form-control(type="file"  name="photo")
-            //- input(type="hidden" value=id name="userId")
-        button.btn.btn-primary(type="submit") Add Photo
+            input.form-control-file(type="file" name="photo")
+        .form-row
+            .col
+                a.btn.btn-light.form-control(href="/") Back
+            .col
+                button.btn.btn-primary.form-control(type="submit") Add
+
+   
+
+    //- .col-12
+    //-     ol
+    //-         each _,i in data
+    //-             li= data[i].name
+                
+    script.
+        console.log(!{JSON.stringify(nama)})
+        console.log(!{JSON.stringify(photo)})
+                            

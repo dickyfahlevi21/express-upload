@@ -2,6 +2,9 @@ var express = require("express");
 
 const uploadsMiddlewar = require("../middleware/uploads");
 const UserControllers = require("../controllers/users");
+const {
+  editUser
+} = require("../controllers/users")
 var router = express.Router();
 
 /* GET users listing. */
